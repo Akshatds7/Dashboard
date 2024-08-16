@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import SummaryCards from './components/SummaryCards';
+import ConversationsChart from './components/ConversationsChart';
+import PieChart from './components/PieChart';
+import SixMonthsChart from './components/SixMonthsChart';
+import FeedbackRatings from './components/FeedbackRatings';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="container">
+        <SummaryCards />
+        {/* Flexbox container to align charts side by side */}
+        <div className="charts-container">
+          <div className="chart-item wide">
+            <ConversationsChart />
+          </div>
+          <div className="chart-item narrow">
+            <PieChart />
+          </div>
+        </div>
+        <SixMonthsChart />
+        <FeedbackRatings />
+      </div>
     </div>
   );
 }

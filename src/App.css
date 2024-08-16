@@ -2,37 +2,160 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.charts-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+}
+
+.header {
+  background-color: #282c34;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.summary-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  background: linear-gradient(to bottom, #33ccff 0%, #00ff99 100%);
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+}
+
+.conversations-chart {
+  flex: 3;
+  text-align: left;
+}
+
+.conversations-chart h2 {
+  margin-bottom: 10px;
+}
+
+.conversations-chart select {
+  margin-bottom: 20px;
+}
+
+.conversations-chart img {
+  width: 100%;
+}
+.conversations-chart,
+.chart {
+  width: 100%;
+}
+
+.chart-item:last-child {
+  margin-right: 0;
+}
+
+.pie-chart {
+  flex: 1;
+  align-content: center;
+}
+
+.pie-chart img {
+  width: 100%;
+  margin-top: 75px;
+}
+
+.six-months-chart {
+  margin: 20px 0;
+}
+
+.six-months-chart img {
+  width: 100%;
+}
+
+.box {
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.rating {
+  font-size: 24px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  background-color: aqua;
+}
+.MuiBox-root{
+  background-color: #282c34;
+}
+.css-iuw8w5{
+  color: white;
+}
+.css-ylx23d{
+  color: white;
+}
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.chart-item {
+  flex: 1;
+  margin-right: 20px;
+  background-color: #ffffff; /* Ensure consistent background */
+  padding: 20px; /* Add padding inside the chart containers */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better separation */
+}
+
+/* Apply a specific width for the ConversationsChart to make it wider */
+.chart-item.wide {
+  flex: 5;
+}
+.chart-item {
+  flex: 1;
+  margin-right: 20px;
+  background-color: #ffffff; /* Ensure consistent background */
+  padding: 20px; /* Add padding inside the chart containers */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better separation */
+}
+
+/* Apply a specific width for the ConversationsChart to make it wider */
+.chart-item.wide {
+  flex: 2;
+}
+
+/* This will remove the margin for the last item */
+.chart-item:last-child {
+  margin-right: 0;
+}
+.conversations-chart{
+  width: 100%;
+}
+
+.chart-item.wide {
+  flex-basis: 65%;
+  margin-right: 20px;
+}
+
+/* Specific width for the PieChart to make it 25% */
+.chart-item.narrow {
+  flex-basis: 35%;
 }
